@@ -1,6 +1,6 @@
 import React from "react";
-import "./app.scss";
-import { FaCheck } from "react-icons/fa";
+import "./styles/app.scss";
+import Task from "./components/Task";
 
 function App() {
   const tasks = ["do laundry", "clean car", "learn html"];
@@ -8,11 +8,11 @@ function App() {
   return (
     <div className="task-container">
       <input />
-      <ul className="taskList">
+      <div className="taskList">
         {tasks.map((taskName) => (
-          <li className="task">{taskName}</li>
+          <Task name={taskName} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
