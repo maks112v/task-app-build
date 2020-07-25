@@ -1,14 +1,16 @@
 import React from "react";
+import "./app.scss";
+import { FaCheck } from "react-icons/fa";
 
 function App() {
   const tasks = ["do laundry", "clean car", "learn html"];
 
   return (
-    <div>
+    <div className="task-container">
       <input />
-      <ul>
+      <ul className="taskList">
         {tasks.map((taskName) => (
-          <li>{taskName}</li>
+          <li className="task">{taskName}</li>
         ))}
       </ul>
     </div>
